@@ -43,8 +43,9 @@ const PopupContainer = () => {
     return (
         <div
             ref={containerRef}
-            className="absolute bg-white shadow-lg rounded-md p-3 border border-gray-200 min-w-[270px]"
-            style={{display: popup ? 'block' : 'none'}}
+            className={`absolute bg-white shadow-lg rounded-md p-3 border border-gray-200 min-w-[270px] ${
+                popup ? 'block' : 'hidden'
+            }`}
         >
             <div className={"flex flex-row items-center justify-between "}>
                 <span className={"text-gray-500 font-semibold"}>{popup?.data.title || "Details"}</span>
